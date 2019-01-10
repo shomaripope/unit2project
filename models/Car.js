@@ -7,7 +7,11 @@ const Car = new Schema({
     make: String,
     model: String,
     image: String,
-    isAvailable: Boolean
+    isAvailable: Boolean,
+    post: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Post'
+    }]
 });
 
 module.exports = mongoose.model("Car", Car);

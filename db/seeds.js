@@ -8,7 +8,8 @@ Car.deleteMany({})
             make: 'Honda',
             model: 'Accord',
             image: 'https://healthelevate.com/wp-content/uploads/2018/10/2003-2005_Honda_Accord_coupe_-_03-16-2012.jpg',
-            isAvailable: true
+            isAvailable: true,
+            post: []
         })
             .then((car) => {
                 Promise.all([myCar]).then(() => {
@@ -24,7 +25,8 @@ Car.deleteMany({})
             name: 'Shomari Pope',
             image: 'https://healthelevate.com/wp-content/uploads/2018/10/shomPope.png',
     location: 'Atlanta',
-    content: 'hello world!'
+    content: 'hello world!',
+            cars: []
         })
             .then((user) => {
                 Promise.all([userData]).then(() => {
