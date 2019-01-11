@@ -10,7 +10,7 @@ router.get('/new', carController.new)
 router.get('/:id', carController.show)
 router.get('/:id/edit', carController.edit)
 router.patch('/:id', carController.update)
-// router.get('/:id/edit', carController.edit)
+router.delete('/:id', carController.delete)
 // router.put('/:id', carController.update)
 // router.destroy('/:id', carController.destroy)
 

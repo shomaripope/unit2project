@@ -14,7 +14,7 @@ Car.deleteMany({})
             .then((car) => {
                 Promise.all([myCar]).then(() => {
                     car.save()
-                    console.log('successfully seeded')
+                    //console.log('successfully seeded')
                 })
             })
     });
@@ -31,7 +31,7 @@ Car.deleteMany({})
             .then((user) => {
                 Promise.all([userData]).then(() => {
                     user.save()
-                    console.log('successfully seeded')
+                    //console.log('successfully seeded')
                 })
             })
     });
@@ -41,7 +41,7 @@ Car.deleteMany({})
         const userPost = Post.create({
             title: 'nice car!',
             author: 'Ari N-Kosi',
-            date: date(),
+            date: "two days before the day after tomorrow...!",
             comment: 'hello world to you too!'
         })
             .then((userComment) => {

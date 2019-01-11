@@ -1,5 +1,9 @@
 <h1>this is the show page</h1>
-<a href="/{{car._id}}/edit"><button >Edit Car</button></a>
 
-{{car.make}}
-{{car.model}}
+
+<div>{{car.make}}</div> <br>
+<div>{{car.model}}</div> <br>
+<img src={{car.image}}  alt=""><br>
+<a href="{{car.id}}/edit"><button class="btn" >Edit Car</button></a>
+<form action="/{{car.id}}?_method=DELETE" method="POST">
+<button class="btn">Delete Car</button></form>
