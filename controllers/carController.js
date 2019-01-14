@@ -1,4 +1,4 @@
-const Car = require('../models/Car')
+const Car = require('../models/car')
 
 const carController = {
     index: (req, res) => {
@@ -19,12 +19,12 @@ const carController = {
             image: req.body.year,
             isAvailable: req.body.isAvailable
         }).then(() => {
-            res.redirect('/')
+            res.redirect('/car')
         })
     },
     show: (req, res) => {
-        const carId = req.params.id
-        console.log(carId)
+        const carId = req.params.carId
+        //console.log("carId" )
         Car.findById(carId).then((car) => {
 
             res.render('car/show', { car })
@@ -45,7 +45,7 @@ const carController = {
     delete: (req, res) => {
         const carId = req.params.id
         Car.findByIdAndRemove(carId).then(() => {
-            res.redirect('/')
+            res.redirect('/car')
         })
     }
 

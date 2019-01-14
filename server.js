@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride('_method'))
 app.use('/', router)
-app.use('/car', router)
+//app.use('/car', router)
 app.set("view engine", "hbs")
 const PORT = process.env.PORT || 3000
 

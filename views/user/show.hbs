@@ -1,0 +1,9 @@
+<h1>this is the show page</h1>
+
+<div>{{user.name}}</div> <br>
+<div>{{user.location}}</div> <br>
+<div>{{user.content}}</div> <br>
+
+<a href="{{user.id}}/edit"><button class="btn" >Edit User</button></a>
+<form action="/{{user.id}}?_method=DELETE" method="POST">
+<button class="btn">Delete User</button></form>

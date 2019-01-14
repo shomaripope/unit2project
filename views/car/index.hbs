@@ -1,11 +1,10 @@
 
 {{#each car}}
-<a href="/{{_id}}"><h1>{{make}}</h1></a>
+<a href="/{{_id}}/show"><h1>{{make}}</h1></a>
 <h3>{{model}}</h3>
 <p>{{post}}</p>
 
 {{/each}}
-<img src={{image}} alt="{{car.make}}" style="width: 100px;">
-<a href="/new"> <button >Add New Car</button></a>
+<a href="/car/new"> <button >Add New Car</button></a>
 
 
