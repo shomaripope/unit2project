@@ -13,9 +13,9 @@ router.post('/', userController.create)
 router.get('/user/new', userController.new)
 router.get('/:carId/show', carController.show)
 
-router.get('/:id/car/edit', carController.edit)
-router.patch('/:id/:carId', carController.update)
-router.delete('/:id/:carId', carController.delete)
+router.get('/:car/edit', carController.edit)
+router.patch('/:carId', carController.update)
+router.delete('/:car', carController.delete)
 
 
 router.get('/:id', userController.show)
