@@ -31,21 +31,22 @@ const carController = {
         })
     },
     edit: (req, res) => {
-        const carId = req.params.id
+        Car.findById(req.params.id).then(car =>{
         // console.log(carId)
-        res.render('car/edit', { carId })
+        res.render('/car/edit')
+        })
     },
     update: (req, res) => {
-        const carId = req.params.id
+        const carId = req.params.carId
         console.log(req.body)
         Car.findByIdAndUpdate(carId, req.body, { new: true }).then((car) => {
             res.redirect(`/${carId}`)
         })
     },
     delete: (req, res) => {
-        const carId = req.params.id
+        const carId = req.params.carId
         Car.findByIdAndRemove(carId).then(() => {
-            res.redirect('/car')
+            res.redirect(`/car/${car._id}`)
         })
     }
 
